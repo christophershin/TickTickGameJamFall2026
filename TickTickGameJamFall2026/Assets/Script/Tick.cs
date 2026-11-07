@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Tick : MonoBehaviour
@@ -28,5 +30,42 @@ public class Tick : MonoBehaviour
             transform.position += playerdir.normalized * moveSpeed * Time.deltaTime;
         }
     }
+    
+
+
+    public void TakeDamage(float dmg)
+    {
+        health -= dmg;
+        StartCoroutine(damageTick());
+
+        if (health<=0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("PlayerAttack"))
+        {
+            float dmg = collision.gameObject.GetComponent<BananaProjectile>().bananaDamage;
+
+            TakeDamage(dmg);
+            Debug.Log(dmg);
+        }
+    }
+
+    IEnumerator damageTick()
+    {
+
+        GetComponent<SpriteRenderer>().color = Color.red;
+
+        yield return new WaitForSeconds(0.1f);
+
+        GetComponent<SpriteRenderer>().color = Color.white;
+    }
+
+
+
 
 }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BananaProjectile : MonoBehaviour
 {
-
+    public float bananaDamage = 1;
     public float projectileSpeed = 20;
     public Vector2 dir;
 
@@ -58,7 +58,7 @@ public class BananaProjectile : MonoBehaviour
             if (collision.gameObject.CompareTag("Player"))
             {
                 Destroy(this.gameObject);
-                Debug.Log("hit");
+
             }
         }
     }
