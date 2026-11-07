@@ -52,22 +52,14 @@ public class BananaProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("hit");
 
-
-        if(collision.gameObject.CompareTag("Player"))
+        if (returnTimer < 0)
         {
-            Destroy(this.gameObject);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
-        Debug.Log("hit");
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Destroy(this.gameObject);
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                Destroy(this.gameObject);
+                Debug.Log("hit");
+            }
         }
     }
 

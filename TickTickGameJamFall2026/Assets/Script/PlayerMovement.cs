@@ -3,10 +3,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
-    [SerializeField]
-    private float moveSpeed = 10;
 
 
     private CharacterController controller;
@@ -24,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     {
 
         Vector2 move = new Vector2(moveInput.x, moveInput.y);
-        controller.Move(move * moveSpeed * Time.deltaTime);
+        controller.Move(move * Stats.Instance.playerSpeed * Time.deltaTime);
 
     }
 

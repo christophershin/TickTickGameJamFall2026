@@ -49,4 +49,5 @@ public class PlayerAbilities : MonoBehaviour
         bana.GetComponent<BananaProjectile>().dir = mouseWorldPosition - (Vector2)transform.position;
         bana.GetComponent<BananaProjectile>().projectileSpeed = projSpeed;
     }
+
 }
