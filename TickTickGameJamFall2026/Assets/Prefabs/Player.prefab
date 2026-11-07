@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 2211106544178231932}
   - component: {fileID: 5005320414556453145}
   - component: {fileID: 9201437359359634836}
-  - component: {fileID: 8937735954966835371}
   - component: {fileID: 8894865897940082295}
+  - component: {fileID: 1667739939160968542}
+  - component: {fileID: 4610074537607473489}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -161,7 +162,21 @@ MonoBehaviour:
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!143 &8937735954966835371
+--- !u!114 &8894865897940082295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642908615216073509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d2c165bdd89ae6468f9b47c245803e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAbilities
+  cam: {fileID: 5292014158624722607}
+  banana: {fileID: 5943953057795519225, guid: a7b06f99145503f438c4497dd8a4d4b6, type: 3}
+--- !u!143 &1667739939160968542
 CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -179,27 +194,34 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1
-  m_Radius: 0.5
+  m_Height: 6.01
+  m_Radius: 2.905
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8894865897940082295
-MonoBehaviour:
+--- !u!65 &4610074537607473489
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642908615216073509}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d2c165bdd89ae6468f9b47c245803e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerAbilities
-  cam: {fileID: 5292014158624722607}
-  banana: {fileID: 5943953057795519225, guid: a7b06f99145503f438c4497dd8a4d4b6, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 5.81, y: 6.01, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4151944099090524295
 GameObject:
   m_ObjectHideFlags: 0
