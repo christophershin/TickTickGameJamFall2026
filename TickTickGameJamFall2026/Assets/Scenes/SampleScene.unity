@@ -365,7 +365,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyManager
   player: {fileID: 1879667875}
   enemyTicks: {fileID: 984456492036300075, guid: 2ad3786cd766c014886b7196e35da16d, type: 3}
-  enemyTimerMax: 5
+  enemyHealthIncrease: 3
+  enemyTimerMax: 1
+  SpawnAmountMax: 2
+  enemyAmountPerSpawn: 2
+  waveTimerMax: 30
 --- !u!1 &1879667875 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 642908615216073509, guid: 63d62973223102a489b1879f7a8d466d, type: 3}
@@ -400,10 +404,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db552107467316147b317046db922181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stats
-  playerSpeed: 10
-  bananaDamage: 1
-  bananaSpeed: 20
-  bananaCount: 1
+  baseSpeed: 10
+  baseBananaDamage: 1
+  baseBananaSpeed: 20
+  baseBananaCount: 1
+  basePlayerHealthMax: 10
+  speedLevel: 1
+  bananaDamageLevel: 1
+  bananaSpeedLevel: 1
+  bananaCountLevel: 1
+  playerHealthMaxLevel: 1
   bananaShotMaxTimer: 5
 --- !u!4 &2077343498
 Transform:
@@ -431,6 +441,22 @@ PrefabInstance:
     - target: {fileID: 642908615216073509, guid: 63d62973223102a489b1879f7a8d466d, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 648485861442850688, guid: 63d62973223102a489b1879f7a8d466d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1617935555931130081, guid: 63d62973223102a489b1879f7a8d466d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1617935555931130081, guid: 63d62973223102a489b1879f7a8d466d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327670470077237703, guid: 63d62973223102a489b1879f7a8d466d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5705743514321867072, guid: 63d62973223102a489b1879f7a8d466d, type: 3}
       propertyPath: m_LocalPosition.x

@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour, IDamagable
     {
         MaxHealth = Stats.Instance.playerHealthMax;
 
-        if (health >= 0)
+        if (health >=0)
         {
             healthbar.localScale = new Vector3(health / MaxHealth, 1, 1);
         }
