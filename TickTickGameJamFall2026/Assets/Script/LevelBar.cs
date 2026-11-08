@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class LevelBar : MonoBehaviour
 {
     private Image fillBarImage;
-    private float fill;
+    private float fill = 0f;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,7 +15,8 @@ public class LevelBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        fill = LevelManager.Instance.currentExp / LevelManager.Instance.maxExp;
-        fillBarImage.rectTransform.localScale = new Vector3(fill, 1f, 1f);
+        float max = LevelManager.Instance.maxExp;
+        float ratio = max > 0f ? Mathf.Clamp01(LevelManager.Instance.currentExp / max) : 0f;
+        fillBarImage.rectTransform.localScale = new Vector3(ratio, 1f, 1f);
     }
 }
