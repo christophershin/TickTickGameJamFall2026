@@ -11,7 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e56952d4-6d6f-4834-a4e3-09287062284b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Script/EnemyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/EnemyManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TickTickGameJamFall2026/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TickTickGameJamFall2026/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.learn.iet-framework/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.learn.iet-framework/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

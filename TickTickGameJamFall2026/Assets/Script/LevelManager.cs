@@ -18,10 +18,12 @@ public class LevelManager : Singleton<LevelManager>
     // skills
     private string[] skillExamples = { "Player Speed", "Banana Damage", "Banana Speed", "Banana Count" };
     [SerializeField] private Sprite[] skillSprites;
+    
+    private string[] cardSkill;
 
     private void Start()
     {
-        
+        cardSkill = new string[skillButtons.Length];
         maxExp =  baseExp * currentLevel * increment;
         print(maxExp);
         ActivateCards(false);
@@ -38,8 +40,6 @@ public class LevelManager : Singleton<LevelManager>
             maxExp = baseExp * currentLevel * increment;
         }
     }
-
-    private string[] cardSkill = new string[3];
 
     public void PickCard(int i)
     {
