@@ -90,7 +90,7 @@ public class EnemyManager : MonoBehaviour
         //     spawnAmount = 0;
         // }
         
-        difficulty += LevelManager.Instance.currentLevel;
+        difficulty = LevelManager.Instance.currentLevel;
         enemyAmountPerSpawn = difficulty;
         SpawnAmountMax = difficulty;
     }
