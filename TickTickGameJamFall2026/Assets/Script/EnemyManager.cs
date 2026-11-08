@@ -78,21 +78,17 @@ public class EnemyManager : MonoBehaviour
 
     void difficultyManager()
     {
-        // waveTimer -= Time.deltaTime;
-        //
-        // if (waveTimer <= 0)
-        // {
-        //     difficulty += 1;
-        //
-        //     waveTimer = waveTimerMax;
-        //     enemyAmountPerSpawn += difficulty;
-        //     SpawnAmountMax += difficulty;
-        //     spawnAmount = 0;
-        // }
-        
-        difficulty = LevelManager.Instance.currentLevel;
-        enemyAmountPerSpawn = difficulty;
-        SpawnAmountMax = difficulty;
+        waveTimer -= Time.deltaTime;
+
+        if (waveTimer <= 0)
+        {
+            difficulty += 1;
+
+            waveTimer = waveTimerMax;
+            enemyAmountPerSpawn += difficulty;
+            SpawnAmountMax += difficulty;
+            spawnAmount = 0;
+        }
     }
 
 
