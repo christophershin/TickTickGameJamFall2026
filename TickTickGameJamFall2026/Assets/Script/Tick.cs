@@ -41,6 +41,8 @@ public class Tick : MonoBehaviour, IDamagable
         health -= dmg;
         StartCoroutine(damageTick());
 
+        AudioManager.Instance.playBananaAudio(AudioManager.BananaSound.Hit);
+
         if (health<=0)
         {
             LevelManager.Instance.GainExp();

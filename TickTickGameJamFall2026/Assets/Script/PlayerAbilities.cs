@@ -38,7 +38,7 @@ public class PlayerAbilities : MonoBehaviour
 
     void fireBanana(float projSpeed)
     {
-
+        AudioManager.Instance.playBananaAudio(AudioManager.BananaSound.Throw);
         // get direction to mouse
         Vector2 mouseScreenPosition = Mouse.current.position.ReadValue();
         Vector3 mouseWorldPos3D = cam.ScreenToWorldPoint(new Vector3(mouseScreenPosition.x, mouseScreenPosition.y, Mathf.Abs(cam.transform.position.z)));
