@@ -1912,6 +1912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameMenu
   gameSceneName: SampleScene
+  stats: {fileID: 1770468137297888074, guid: ec1be51921eebf745b223ce8a52afba6, type: 3}
 --- !u!1 &1654476703
 GameObject:
   m_ObjectHideFlags: 0
