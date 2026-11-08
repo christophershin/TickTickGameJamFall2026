@@ -6188,7 +6188,7 @@ MonoBehaviour:
   - {fileID: 336019136}
   - {fileID: 1256300064}
   skillSprites:
-  - {fileID: -3836136252082797527, guid: a7da94b3242de1043865b4c72fef69a7, type: 3}
+  - {fileID: 4778297269382911095, guid: a9294fbe671abbd47ae898f84e60d974, type: 3}
   - {fileID: 8450001925926985166, guid: f9f49cbaa2edba24aad48d810897625e, type: 3}
   - {fileID: -3836136252082797527, guid: a7da94b3242de1043865b4c72fef69a7, type: 3}
   - {fileID: -1424980242976151508, guid: 9d6243c77ebce994695cf0921553719a, type: 3}
