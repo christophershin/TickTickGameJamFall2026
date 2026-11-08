@@ -292,8 +292,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   currentLevel: 1
   currentExp: 0
-  maxExp: 5
-  baseExp: 5
+  maxExp: 3
+  baseExp: 3
   increment: 1.5
   skillButtons:
   - {fileID: 5700941778187937406}

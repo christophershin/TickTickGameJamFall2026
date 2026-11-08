@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class LevelManager : Singleton<LevelManager>
 {
@@ -57,13 +58,15 @@ public class LevelManager : Singleton<LevelManager>
         
         ActivateCards(false);
     }
+    
+    
 
     private void GiveOptions()
     {
         ActivateCards(true);
-        SetSkillInfo(0, "Player Speed");
-        SetSkillInfo(1, "Banana Damage");
-        SetSkillInfo(2, "Banana Speed");
+        // SetSkillInfo(0, "Player Speed");
+        // SetSkillInfo(1, "Banana Damage");
+        // SetSkillInfo(2, "Banana Speed");
     }
 
     private void ActivateCards(bool active)
@@ -71,6 +74,7 @@ public class LevelManager : Singleton<LevelManager>
         for (int i = 0; i < skillButtons.Length; i++)
         {
             skillButtons[i].gameObject.SetActive(active);
+            SetSkillInfo(i, GetRandomSkill());
         }
     }
 
@@ -78,5 +82,12 @@ public class LevelManager : Singleton<LevelManager>
     {
         skillTexts[i].text = skill;
         cardSkill[i] = skill;
+    }
+    
+    private string[] skillExamples = { "Player Speed", "Banana Damage", "Banana Speed", "Banana Count" };
+    
+    private string GetRandomSkill()
+    {
+        return skillExamples[Random.Range(0, skillExamples.Length)];
     }
 }

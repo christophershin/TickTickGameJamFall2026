@@ -39,12 +39,13 @@ public class Tick : MonoBehaviour, IDamagable
 
     public void TakeDamage(float dmg)
     {
-        LevelManager.Instance.GainExp();
+        
         health -= dmg;
         StartCoroutine(damageTick());
 
         if (health<=0)
         {
+            LevelManager.Instance.GainExp();
             Destroy(this.gameObject);
         }
     }
