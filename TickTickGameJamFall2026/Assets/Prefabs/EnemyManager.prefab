@@ -55,6 +55,8 @@ MonoBehaviour:
   - {fileID: -1784101702677407546, guid: 0839c34f57dbd6d418c67c73acdf0292, type: 3}
   - {fileID: -4624856894941510488, guid: 5def49fc1c2926d4fb5d6545252dc6e6, type: 3}
   - {fileID: 4127452442985978137, guid: 4bdbf76f0151c634fa9b037805c43c06, type: 3}
+  - {fileID: -3884974286624751132, guid: afdb47de0edf05042826014328bac0b8, type: 3}
+  - {fileID: 5269928206216523449, guid: 2381e934cd25587489a11c8a84d3e40d, type: 3}
   player: {fileID: 0}
   enemyTicks: {fileID: 984456492036300075, guid: 2ad3786cd766c014886b7196e35da16d, type: 3}
   enemyHealthIncrease: 8
