@@ -6177,7 +6177,7 @@ MonoBehaviour:
   currentExp: 0
   maxExp: 1
   baseExp: 1
-  increment: 2
+  increment: 7
   skillButtons:
   - {fileID: 481041083}
   - {fileID: 2102186100}
