@@ -449,8 +449,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6748761705430364664}
   - component: {fileID: 128305965164848359}
+  - component: {fileID: 4622588221254851922}
   m_Layer: 0
-  m_Name: BananaCatcher
+  m_Name: PlayerExtension
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -517,3 +518,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &4622588221254851922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8866095266325812198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a614c0a8b2c697f4fb881a0a1ffbcb36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth

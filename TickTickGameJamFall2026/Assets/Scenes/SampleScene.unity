@@ -364,8 +364,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyManager
   player: {fileID: 1879667875}
-  spawnRadius: 50
   enemyTicks: {fileID: 984456492036300075, guid: 2ad3786cd766c014886b7196e35da16d, type: 3}
+  enemyTimerMax: 5
 --- !u!1 &1879667875 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 642908615216073509, guid: 63d62973223102a489b1879f7a8d466d, type: 3}
@@ -403,7 +403,8 @@ MonoBehaviour:
   playerSpeed: 10
   bananaDamage: 1
   bananaSpeed: 20
-  bananaMaxTimer: 5
+  bananaCount: 1
+  bananaShotMaxTimer: 5
 --- !u!4 &2077343498
 Transform:
   m_ObjectHideFlags: 0
@@ -430,10 +431,6 @@ PrefabInstance:
     - target: {fileID: 642908615216073509, guid: 63d62973223102a489b1879f7a8d466d, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4290963827212247333, guid: 63d62973223102a489b1879f7a8d466d, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5705743514321867072, guid: 63d62973223102a489b1879f7a8d466d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -473,30 +470,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5705743514321867072, guid: 63d62973223102a489b1879f7a8d466d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7118832903984230199, guid: 63d62973223102a489b1879f7a8d466d, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 7118832903984230199, guid: 63d62973223102a489b1879f7a8d466d, type: 3}
-      propertyPath: m_isOrthographic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7118832903984230199, guid: 63d62973223102a489b1879f7a8d466d, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 7118832903984230199, guid: 63d62973223102a489b1879f7a8d466d, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4281479730
-      objectReference: {fileID: 0}
-    - target: {fileID: 7118832903984230199, guid: 63d62973223102a489b1879f7a8d466d, type: 3}
-      propertyPath: m_TextStyleHashCode
-      value: -1183493901
-      objectReference: {fileID: 0}
-    - target: {fileID: 7118832903984230199, guid: 63d62973223102a489b1879f7a8d466d, type: 3}
-      propertyPath: m_ActiveFontFeatures.Array.size
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
