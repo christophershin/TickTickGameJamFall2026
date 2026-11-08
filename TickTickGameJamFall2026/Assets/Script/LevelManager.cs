@@ -14,6 +14,10 @@ public class LevelManager : Singleton<LevelManager>
     [SerializeField] private float increment = 1.5f;
     [SerializeField] private Button[] skillButtons;
     [SerializeField] private TextMeshProUGUI[] skillTexts;
+    
+    // skills
+    private string[] skillExamples = { "Player Speed", "Banana Damage", "Banana Speed", "Banana Count" };
+    [SerializeField] private Sprite[] skillSprites;
 
     private void Start()
     {
@@ -83,17 +87,21 @@ public class LevelManager : Singleton<LevelManager>
         for (int i = 0; i < skillButtons.Length; i++)
         {
             skillButtons[i].gameObject.SetActive(active);
-            SetSkillInfo(i, GetRandomSkill());
+            SetSkillInfo(i, GetRandomNumber());
         }
     }
 
-    private void SetSkillInfo(int i, string skill)
+    private void SetSkillInfo(int i, int skill)
     {
-        skillTexts[i].text = skill;
-        cardSkill[i] = skill;
+        //skillTexts[i].text = skill;
+        skillButtons[i].image.sprite = skillSprites[skill];
+        cardSkill[i] = skillExamples[skill];
     }
-    
-    private string[] skillExamples = { "Player Speed", "Banana Damage", "Banana Speed", "Banana Count" };
+
+    private int GetRandomNumber()
+    {
+        return Random.Range(0, skillExamples.Length);
+    }
     
     private string GetRandomSkill()
     {
