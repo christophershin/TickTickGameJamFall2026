@@ -65,6 +65,9 @@ public class PlayerHealth : MonoBehaviour, IDamagable
     public void goTomainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        Destroy(Stats.Instance);
+
+
     }
 
 
