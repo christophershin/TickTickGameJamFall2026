@@ -1,14 +1,17 @@
 using System.Collections;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class Tick : MonoBehaviour, IDamagable
 {
-
+    [HideInInspector]
     public GameObject player;
     public float moveSpeed = 10;
     public float health = 5;
     public float damage = 2;
+
+    public List<Sprite> sprites;
 
     void Start()
     {
