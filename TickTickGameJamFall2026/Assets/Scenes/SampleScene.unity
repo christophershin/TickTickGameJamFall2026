@@ -6713,61 +6713,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a816ece6708320d4298ebc3f7ed74a07, type: 3}
---- !u!1 &2077343496
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2077343498}
-  - component: {fileID: 2077343497}
-  m_Layer: 0
-  m_Name: StatsHolder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2077343497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2077343496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db552107467316147b317046db922181, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Stats
-  baseSpeed: 10
-  baseBananaDamage: 1
-  baseBananaSpeed: 20
-  baseBananaCount: 1
-  basePlayerHealthMax: 10
-  speedLevel: 1
-  bananaDamageLevel: 1
-  bananaSpeedLevel: 1
-  bananaCountLevel: 1
-  playerHealthMaxLevel: 1
-  bananaShotMaxTimer: 5
---- !u!4 &2077343498
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2077343496}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.90773, y: -0.60803, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2101030448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7172,7 +7117,6 @@ SceneRoots:
   - {fileID: 7638850063700348143}
   - {fileID: 1008827608}
   - {fileID: 5326435963082688048}
-  - {fileID: 2077343498}
   - {fileID: 1359378985}
   - {fileID: 1343267255}
   - {fileID: 844607989}

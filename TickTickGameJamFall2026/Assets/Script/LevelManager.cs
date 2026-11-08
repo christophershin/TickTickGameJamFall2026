@@ -21,6 +21,7 @@ public class LevelManager : Singleton<LevelManager>
 
     private void Start()
     {
+        
         maxExp =  baseExp * currentLevel * increment;
         print(maxExp);
         ActivateCards(false);

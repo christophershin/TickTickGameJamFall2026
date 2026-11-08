@@ -59,7 +59,7 @@ MonoBehaviour:
   - {fileID: 5269928206216523449, guid: 2381e934cd25587489a11c8a84d3e40d, type: 3}
   player: {fileID: 0}
   enemyTicks: {fileID: 984456492036300075, guid: 2ad3786cd766c014886b7196e35da16d, type: 3}
-  enemyHealthIncrease: 8
+  enemyHealthIncrease: 5
   enemyTimerMax: 1
   SpawnAmountMax: 2
   enemyAmountPerSpawn: 2

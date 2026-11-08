@@ -1,8 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static UnityEngine.Rendering.DebugUI;
 
 public class Stats : Singleton<Stats>
 {
+    [SerializeField]
+    PlayerHealth playerHealth;
+
     // base stats
     [SerializeField] private int baseSpeed = 10;
     [SerializeField] private int baseBananaDamage = 1;
@@ -46,4 +50,6 @@ public class Stats : Singleton<Stats>
     {
         bananaCountLevel++;
     }
+
+
 }

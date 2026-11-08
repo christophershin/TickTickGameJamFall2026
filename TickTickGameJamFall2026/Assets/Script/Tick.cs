@@ -8,7 +8,7 @@ public class Tick : MonoBehaviour, IDamagable
     [HideInInspector]
     public GameObject player;
     public float moveSpeed = 10;
-    public float health = 5;
+    public float health = 1;
     public float damage = 2;
 
     void Start()
