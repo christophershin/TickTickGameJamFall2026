@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour, IDamagable
     public bool isAlive = true;
 
     public GameObject deathScreen;
+    public AudioSource sounds;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -46,6 +47,7 @@ public class PlayerHealth : MonoBehaviour, IDamagable
             Debug.Log("dead");
             isAlive = false;
             deathScreen.SetActive(true);
+            sounds.Play();
             
         }
     }
