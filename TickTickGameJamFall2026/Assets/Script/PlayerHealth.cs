@@ -18,6 +18,8 @@ public class PlayerHealth : MonoBehaviour, IDamagable
     // Update is called once per frame
     void Update()
     {
+        MaxHealth = Stats.Instance.playerHealthMax;
+
         if (health >= 0)
         {
             healthbar.localScale = new Vector3(health / MaxHealth, 1, 1);
