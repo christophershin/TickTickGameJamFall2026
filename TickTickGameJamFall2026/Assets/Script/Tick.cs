@@ -2,12 +2,13 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Tick : MonoBehaviour
+public class Tick : MonoBehaviour, IDamagable
 {
 
     public GameObject player;
     public float moveSpeed = 10;
     public float health = 5;
+    public float damage = 2;
 
     void Start()
     {

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IDamagable
 {
 
 
@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 moveInput;
     Vector2 velocity;
 
+    float health = 10;
 
     void Start()
     {
@@ -28,5 +29,24 @@ public class PlayerMovement : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
+    }
+
+    public void TakeDamage(float dmg)
+    {
+        health -= dmg;
+
+        if(health<=0)
+        {
+            Debug.Log("dead");
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            float dmg = collision.gameObject.GetComponent<Tick>().damage;
+            TakeDamage(dmg);
+        }
     }
 }

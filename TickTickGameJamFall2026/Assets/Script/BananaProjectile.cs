@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class BananaProjectile : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class BananaProjectile : MonoBehaviour
 
     public GameObject parent;
 
+    private Vector3 rotationSpeed = new Vector3(0,0,10);
+
     void Start()
     {
         returnTimer = returnTimerMax;
@@ -19,14 +22,18 @@ public class BananaProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        bananaDamage = Stats.Instance.bananaDamage;
+        projectileSpeed = Stats.Instance.bananaSpeed;
 
     }
 
 
     private void FixedUpdate()
     {
+        Vector3 randRot = new Vector3(0,0, Random.Range(-2, 2));
+
         BananaMovement();
+        transform.Rotate(rotationSpeed + randRot);
     }
 
 

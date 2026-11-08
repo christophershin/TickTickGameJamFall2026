@@ -29,7 +29,7 @@ public class PlayerAbilities : MonoBehaviour
         {
             fireBanana(Stats.Instance.bananaSpeed);
 
-            bananaTimer = Stats.Instance.bananaMaxTimer;
+            bananaTimer = Stats.Instance.bananaShotMaxTimer;
         }
 
     }
@@ -44,10 +44,17 @@ public class PlayerAbilities : MonoBehaviour
         mouseWorldPosition = new Vector2(mouseWorldPos3D.x, mouseWorldPos3D.y);
 
 
-        GameObject bana = Instantiate(banana, transform.position, transform.rotation);
-        bana.GetComponent<BananaProjectile>().parent = this.gameObject;
-        bana.GetComponent<BananaProjectile>().dir = mouseWorldPosition - (Vector2)transform.position;
-        bana.GetComponent<BananaProjectile>().projectileSpeed = projSpeed;
+        float rotAmount = 2 * Stats.Instance.bananaCount;
+        Vector2 randRot = new Vector2(Random.Range(-rotAmount, rotAmount), Random.Range(-rotAmount, rotAmount));
+
+
+        for (int i = 0; i < Stats.Instance.bananaCount; i++)
+        {
+            GameObject bana = Instantiate(banana, transform.position, transform.rotation);
+            bana.GetComponent<BananaProjectile>().parent = this.gameObject;
+            bana.GetComponent<BananaProjectile>().dir = (mouseWorldPosition - (Vector2)transform.position) + randRot;
+            bana.GetComponent<BananaProjectile>().projectileSpeed = projSpeed;
+        }
     }
 
 }

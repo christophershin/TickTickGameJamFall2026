@@ -13,9 +13,10 @@ public class Stats : Singleton<Stats>
 
     public float bananaDamage = 1;
     public float bananaSpeed = 20;
+    public int bananaCount = 1;
 
     [Range(0f, 5)]
-    public float bananaMaxTimer  = 5;
+    public float bananaShotMaxTimer  = 5;
 
     
 
