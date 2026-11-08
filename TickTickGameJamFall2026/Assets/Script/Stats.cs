@@ -4,8 +4,6 @@ using static UnityEngine.Rendering.DebugUI;
 
 public class Stats : Singleton<Stats>
 {
-    [SerializeField]
-    PlayerHealth playerHealth;
 
     // base stats
     [SerializeField] private int baseSpeed = 10;
@@ -51,5 +49,9 @@ public class Stats : Singleton<Stats>
         bananaCountLevel++;
     }
 
+    private void Update()
+    {
+        
+    }
 
 }
