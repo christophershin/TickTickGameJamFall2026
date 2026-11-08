@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2775570662885948044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7015869938420708308}
+  - component: {fileID: 980137721224505013}
+  m_Layer: 0
+  m_Name: EnemyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7015869938420708308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2775570662885948044}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &980137721224505013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2775570662885948044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b66dc559feac146bdc717494ec903b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyManager
+  sprites:
+  - {fileID: -7692115157373309178, guid: 77b8e06d192efef468ef246fc6dcf442, type: 3}
+  - {fileID: 2397735905803800386, guid: b019f229ebe5f374bb169623b5eaa944, type: 3}
+  - {fileID: 4195188429060790306, guid: bcf0cf3f93f79924fafeb75da57cb580, type: 3}
+  - {fileID: -6694496804397668063, guid: ac606682b0b10bb44869245546ad9acd, type: 3}
+  - {fileID: -6201722897018673751, guid: 32eb743914109284d925f370c116b0f8, type: 3}
+  - {fileID: -3426652189937407271, guid: 0407846a6e452d74a9ce63de508d91e5, type: 3}
+  - {fileID: -1696896115828339196, guid: f816813d7769cd044a8717db1f8d462b, type: 3}
+  - {fileID: -1784101702677407546, guid: 0839c34f57dbd6d418c67c73acdf0292, type: 3}
+  player: {fileID: 0}
+  enemyTicks: {fileID: 984456492036300075, guid: 2ad3786cd766c014886b7196e35da16d, type: 3}
+  enemyHealthIncrease: 4
+  enemyTimerMax: 1
+  SpawnAmountMax: 2
+  enemyAmountPerSpawn: 2
+  waveTimerMax: 30

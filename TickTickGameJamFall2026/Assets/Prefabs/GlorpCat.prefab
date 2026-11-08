@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3356348256340976637}
   - component: {fileID: 6869113860359398575}
   - component: {fileID: 426012193824291215}
+  - component: {fileID: 1221766615976354279}
   m_Layer: 0
   m_Name: GlorpCat
   m_TagString: Untagged
@@ -157,3 +158,15 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.86
+--- !u!114 &1221766615976354279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6435799807289144606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69bb2748d83969c4cbd6d518c4739032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GlorpCat

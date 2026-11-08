@@ -11,11 +11,9 @@ public class Tick : MonoBehaviour, IDamagable
     public float health = 5;
     public float damage = 2;
 
-    public List<Sprite> sprites;
-
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
