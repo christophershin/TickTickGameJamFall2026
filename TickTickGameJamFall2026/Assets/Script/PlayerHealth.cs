@@ -24,6 +24,10 @@ public class PlayerHealth : MonoBehaviour, IDamagable
         {
             healthbar.localScale = new Vector3(health / MaxHealth, 1, 1);
         }
+        else
+        {
+            healthbar.localScale = new Vector3(0, 1, 1);
+        }
         
     }
 
