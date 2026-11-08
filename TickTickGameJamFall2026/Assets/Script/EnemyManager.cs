@@ -10,8 +10,12 @@ public class EnemyManager : MonoBehaviour
 
     private float enemyTimer;
     public float enemyTimerMax = 3;
+
+    [Range(1,50)]
     public int SpawnAmountMax = 2;
     int spawnAmount;
+
+    [Range(1,10)]
     public int enemyAmountPerSpawn = 2;
 
 
@@ -58,7 +62,7 @@ public class EnemyManager : MonoBehaviour
 
         for(int i=0; i<enemyAmountPerSpawn; i++)
         {
-            spawnPos += new Vector2(Random.Range(-10, 10), Random.Range(-10, 10));
+            spawnPos += new Vector2(Random.Range(-8, 8), Random.Range(-8, 8));
 
             GameObject tick = Instantiate(enemyTicks, spawnPos, Quaternion.identity);
             tick.GetComponent<Tick>().player = player;

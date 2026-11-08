@@ -35,6 +35,7 @@ public class PlayerHealth : MonoBehaviour, IDamagable
         if (health <= 0)
         {
             Debug.Log("dead");
+            
         }
     }
 
