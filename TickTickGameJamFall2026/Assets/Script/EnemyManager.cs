@@ -1,8 +1,10 @@
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-
+    public List<Sprite> sprites;
     public GameObject player;
     private float spawnRadius = 80;
     public GameObject enemyTicks;
@@ -65,6 +67,7 @@ public class EnemyManager : MonoBehaviour
             spawnPos += new Vector2(Random.Range(-8, 8), Random.Range(-8, 8));
 
             GameObject tick = Instantiate(enemyTicks, spawnPos, Quaternion.identity);
+            tick.GetOrAddComponent<SpriteRenderer>().sprite = sprites[random()];
             tick.GetComponent<Tick>().player = player;
             tick.GetComponent<Tick>().health += enemyHealthIncrease*difficulty;
             tick.GetComponent<Tick>().damage += difficulty;
@@ -86,5 +89,14 @@ public class EnemyManager : MonoBehaviour
             SpawnAmountMax += difficulty;
             spawnAmount = 0;
         }
+    }
+
+
+    int random()
+    {
+
+        int rand = Random.Range(0, sprites.Count);
+
+        return rand;
     }
 }
