@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour, IDamagable
@@ -8,11 +9,15 @@ public class PlayerHealth : MonoBehaviour, IDamagable
     public float MaxHealth = 10;
     private float health = 10;
     public RectTransform healthbar;
+    public bool isAlive = true;
+
+    public GameObject deathScreen;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         health = MaxHealth;
+        deathScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -39,6 +44,8 @@ public class PlayerHealth : MonoBehaviour, IDamagable
         if (health <= 0)
         {
             Debug.Log("dead");
+            isAlive = false;
+            deathScreen.SetActive(true);
             
         }
     }
@@ -53,4 +60,12 @@ public class PlayerHealth : MonoBehaviour, IDamagable
             TakeDamage(dmg);
         }
     }
+
+
+    public void goTomainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+
 }

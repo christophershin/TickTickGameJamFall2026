@@ -12,6 +12,8 @@ public class PlayerAbilities : MonoBehaviour
 
     private float bananaTimer = 0;
 
+    public PlayerHealth health;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,17 +24,19 @@ public class PlayerAbilities : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bananaTimer -= Time.deltaTime;
-        
-
-
-        if(bananaTimer<=0)
+        if (health.isAlive)
         {
-            fireBanana(Stats.Instance.bananaSpeed);
+            bananaTimer -= Time.deltaTime;
 
-            bananaTimer = Stats.Instance.bananaShotMaxTimer;
+
+
+            if (bananaTimer <= 0)
+            {
+                fireBanana(Stats.Instance.bananaSpeed);
+
+                bananaTimer = Stats.Instance.bananaShotMaxTimer;
+            }
         }
-
     }
 
 

@@ -53,9 +53,11 @@ MonoBehaviour:
   - {fileID: -3426652189937407271, guid: 0407846a6e452d74a9ce63de508d91e5, type: 3}
   - {fileID: -1696896115828339196, guid: f816813d7769cd044a8717db1f8d462b, type: 3}
   - {fileID: -1784101702677407546, guid: 0839c34f57dbd6d418c67c73acdf0292, type: 3}
+  - {fileID: -4624856894941510488, guid: 5def49fc1c2926d4fb5d6545252dc6e6, type: 3}
+  - {fileID: 4127452442985978137, guid: 4bdbf76f0151c634fa9b037805c43c06, type: 3}
   player: {fileID: 0}
   enemyTicks: {fileID: 984456492036300075, guid: 2ad3786cd766c014886b7196e35da16d, type: 3}
-  enemyHealthIncrease: 4
+  enemyHealthIncrease: 8
   enemyTimerMax: 1
   SpawnAmountMax: 2
   enemyAmountPerSpawn: 2

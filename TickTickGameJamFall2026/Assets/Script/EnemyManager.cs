@@ -69,7 +69,7 @@ public class EnemyManager : MonoBehaviour
             GameObject tick = Instantiate(enemyTicks, spawnPos, Quaternion.identity);
             tick.GetOrAddComponent<SpriteRenderer>().sprite = sprites[random()];
             tick.GetComponent<Tick>().player = player;
-            tick.GetComponent<Tick>().health += enemyHealthIncrease*difficulty;
+            tick.GetComponent<Tick>().health *= enemyHealthIncrease*difficulty;
             tick.GetComponent<Tick>().damage += difficulty;
             tick.GetComponent<Tick>().moveSpeed += (difficulty/20);
         }
@@ -99,4 +99,5 @@ public class EnemyManager : MonoBehaviour
 
         return rand;
     }
+
 }

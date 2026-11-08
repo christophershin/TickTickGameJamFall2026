@@ -4,42 +4,28 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
 
-
-    //private CharacterController controller;
-    //Vector2 moveInput;
-    //Vector2 velocity;
+    public PlayerHealth health;
 
     void Start()
     {
-        //controller = GetComponent<CharacterController>();
+        
     }
-
-    // Update is called once per frame
-    //private void Update()
-    //{
-
-    //    Vector2 move = new Vector2(moveInput.x, moveInput.y);
-    //    controller.Move(move * Stats.Instance.playerSpeed * Time.deltaTime);
-
-    //}
 
     private void Update()
-
     {
 
-        float horizontalInput = Input.GetAxis("Horizontal");
+        if (health.isAlive)
+        {
 
-        float verticalInput = Input.GetAxis("Vertical");
+            float horizontalInput = Input.GetAxis("Horizontal");
 
-        Vector3 moveDirection = new Vector3(horizontalInput, verticalInput, 0);
+            float verticalInput = Input.GetAxis("Vertical");
 
-        transform.position += moveDirection * Stats.Instance.playerSpeed * Time.deltaTime;
+            Vector3 moveDirection = new Vector3(horizontalInput, verticalInput, 0);
+
+            transform.position += moveDirection * Stats.Instance.playerSpeed * Time.deltaTime;
+        }
 
     }
 
-
-    //public void Move(InputAction.CallbackContext context)
-    //{
-    //    moveInput = context.ReadValue<Vector2>();
-    //}
 }
