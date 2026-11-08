@@ -71,6 +71,15 @@ public class LevelManager : Singleton<LevelManager>
 
     private void ActivateCards(bool active)
     {
+        if (active)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+        
         for (int i = 0; i < skillButtons.Length; i++)
         {
             skillButtons[i].gameObject.SetActive(active);
