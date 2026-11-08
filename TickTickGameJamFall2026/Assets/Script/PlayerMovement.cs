@@ -5,27 +5,41 @@ public class PlayerMovement : MonoBehaviour
 {
 
 
-    private CharacterController controller;
-    Vector2 moveInput;
-    Vector2 velocity;
+    //private CharacterController controller;
+    //Vector2 moveInput;
+    //Vector2 velocity;
 
     void Start()
     {
-        controller = GetComponent<CharacterController>();
+        //controller = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
+    //private void Update()
+    //{
+
+    //    Vector2 move = new Vector2(moveInput.x, moveInput.y);
+    //    controller.Move(move * Stats.Instance.playerSpeed * Time.deltaTime);
+
+    //}
+
     private void Update()
+
     {
 
-        Vector2 move = new Vector2(moveInput.x, moveInput.y);
-        controller.Move(move * Stats.Instance.playerSpeed * Time.deltaTime);
+        float horizontalInput = Input.GetAxis("Horizontal");
+
+        float verticalInput = Input.GetAxis("Vertical");
+
+        Vector3 moveDirection = new Vector3(horizontalInput, verticalInput, 0);
+
+        transform.position += moveDirection * Stats.Instance.playerSpeed * Time.deltaTime;
 
     }
 
 
-    public void Move(InputAction.CallbackContext context)
-    {
-        moveInput = context.ReadValue<Vector2>();
-    }
+    //public void Move(InputAction.CallbackContext context)
+    //{
+    //    moveInput = context.ReadValue<Vector2>();
+    //}
 }
