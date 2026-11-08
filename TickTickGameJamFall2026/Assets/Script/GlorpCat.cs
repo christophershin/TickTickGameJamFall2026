@@ -6,6 +6,7 @@ public class GlorpCat : MonoBehaviour
     [HideInInspector]
     public GameObject player;
     public float moveSpeed = 10;
+    public float followDis = 10;
 
     void Start()
     {
@@ -23,10 +24,15 @@ public class GlorpCat : MonoBehaviour
     {
 
         Vector3 playerdir = player.transform.position - transform.position;
+        float dis = Vector2.Distance(transform.position, player.transform.position);
 
-        if (player != null)
+        if (dis > followDis)
         {
-            transform.position += playerdir.normalized * moveSpeed * Time.deltaTime;
+            if (player != null)
+            {
+                transform.position += playerdir.normalized * moveSpeed * Time.deltaTime;
+            }
         }
+
     }
 }

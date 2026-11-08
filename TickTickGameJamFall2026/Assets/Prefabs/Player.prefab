@@ -202,6 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAbilities
   cam: {fileID: 5292014158624722607}
   banana: {fileID: 5943953057795519225, guid: a7b06f99145503f438c4497dd8a4d4b6, type: 3}
+  GlorpCat: {fileID: 6435799807289144606, guid: 4007168aa595c7847ac326b891900736, type: 3}
 --- !u!114 &-7578331131297858960
 MonoBehaviour:
   m_ObjectHideFlags: 0

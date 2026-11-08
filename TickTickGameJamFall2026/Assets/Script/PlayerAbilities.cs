@@ -8,14 +8,15 @@ public class PlayerAbilities : MonoBehaviour
     private Vector2 mouseWorldPosition;
 
     [SerializeField]
-    GameObject banana;
+    GameObject banana, GlorpCat;
 
     private float bananaTimer = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       
+        GameObject cat = Instantiate(GlorpCat, transform.position + new Vector3(10,0,0), Quaternion.identity);
+        cat.GetComponent<GlorpCat>().player = this.gameObject;
     }
 
     // Update is called once per frame
